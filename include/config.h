@@ -19,4 +19,5 @@
 // Macro para impressão de erros (sempre habilitado)
 #define PRINT_ERROR(msg) std::cerr << "[" << __FILE__ << ":" << __LINE__ << "] ERROR: " << msg << std::endl
 
+
 #endif // CONFIG_H

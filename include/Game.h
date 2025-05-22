@@ -4,16 +4,16 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h> // Include SDL_ttf for text rendering
 #include <string>
+#include "Character.h"
 
 class Game {
 public:
     Game();
     ~Game();
     void run();
-    int y_pos = 0;
-    int x_pos = 100;
+    int deltaY = 0;
+    int deltaX = 0;
     std::string animation_source = "Liya/right";
-    int animation = 1;
     int score = 0;
 
 private:

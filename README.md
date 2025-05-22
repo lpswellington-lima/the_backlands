@@ -61,3 +61,34 @@
 ├── Makefile                   # Makefile for building the project (if using make)
 └── README.md                  # Project documentation and instructions
 ```
+
+## Game Object Hierarchy
+
+```
+GameObject
+│
+├── Tile                            # Represents a tile on the game map
+│   ├── SolidTile                   # A tile that blocks movement
+│   ├── PlatformTile                # A tile that can be jumped on
+│   ├── WaterTile                   # A tile that represents water
+│   └── GrassTile                   # A tile that represents grass
+│
+├── GameObject                      # Base class for various in-game objects
+│   ├── StaticObject                # Objects that do not move
+│   │   ├── Tree                    # Example of a static object
+│   │   ├── Rock                    # Another example of a static object
+│   │   └── Building                # A building structure in the game
+│   │
+│   ├── DynamicObject               # Objects that can move or change state
+│   │   ├── Item                    # Collectible items (e.g., power-ups)
+│   │   ├── NPC                     # Non-playable characters (e.g., merchants)
+│   │   └── Enemy                   # Enemies that can move and attack
+│   │
+│   ├── Character                   # Base class for player-controlled characters
+│       ├── Player                  # Player character class
+│       └── Enemy                   # Subclass for enemies with specialized behaviors
+│           ├── BossEnemy           # A stronger enemy with unique abilities
+│           └── StandardEnemy       # A standard enemy with basic attack patterns
+│
+└── GameManager                     # Manages game state, resources, and events
+```
